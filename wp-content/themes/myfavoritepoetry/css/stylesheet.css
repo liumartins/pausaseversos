@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'atwriter';
+    src: url('../fonts/atwriter.woff');
+
+}
+
+h1 {}
+h1 {text-align:center; font:bold 22px  atwriter; color: #8a6d3b !important;}
+hr {width: 50%; color: #000!important;}
+
+ul {list-style: none;}
+body, html {
+    height: 100%;
+    width: 100%;
+}
+.general {
+    height:auto;
+}
+
+.nav {
+    height:100%;
+}
+
+.nav .panel {background: #464646; height: 100%;}
+
+.content {
+
+    background: lightgray;
+}
+
+.main-banner {overflow: auto;}
+.main-banner figure {
+    float: left;
+    clear: both;
+
+    position: relative;
+    overflow: auto;
+
+    margin: 0 auto;
+    font-size: 15px;
+}
+.main-banner figure img {
+    vertical-align: bottom;
+}
+
+.main-banner figure figcaption {
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+
+    background: rgba(0,0,0,0.7);
+    text-align: right;
+    color: #fff;
+    padding: 30px;
+}
+
+.main-banner figure figcaption p {
+    width:35%;
+    float: right;
+}
+
+.social-icons {
+    margin: 8% 1%;
+    color:#fff;
+}
+
+
+.social-icons span {
+    padding: 0 0.5%;
+}
+.social-icons span:hover {color:#8a6d3b;}
+.author {
+    margin: 5% 3%;
+}
+.author img {
+    width: 10%;
+}
+
+
+
+.logo {
+    height:auto;
+    width: 100%;
+
+}
+
+.logo-image img {
+    width: 180px;
+    margin:10% 1%;
+
+}
+
+.site-branding h1 { padding:0 2%;  color:#f1f1f1; }
+
+.menu ul li a { font:normal 20px atwriter;  color:#fff;  font-size:20px;}
+.menu ul li a:hover {color:#8a6d3b;}
