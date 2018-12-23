@@ -43,7 +43,7 @@ get_header(); ?>
 					<?php endwhile; // end of the loop. ?>
 				</div><!-- #content -->
 			</div><!-- #primary -->
-
+			<?php get_sidebar(); ?>
 		</div><!-- #main -->
 	</div><!-- .page -->
 <?php get_footer(); ?>

@@ -4,7 +4,7 @@ Theme URI: http://www.anarieldesign.com/the-thinker-lite-free-wordpress-theme/
 Author: Anariel Design
 Author URI: http://anarieldesign.com/
 Description: "The Thinker Lite" is a perfectly simple blogging theme. It has just enough detail without being flashy and just enough features not to get complicated. Beautiful typography and clean layout are a must for any modern blogger and this is where "The Thinker Lite" excels. It keeps readers focused on the content while creating relaxing environment for the eyes. Nice responsive behavior keeps that perfect balance across the whole range of internet capable devices. Be it a 4" smartphone, 10" Tablet or a 27" screen this theme will hold its own unique character and content oriented approach. Theme Demo and Documentation: http://www.anarieldesign.com/the-thinker-lite-free-wordpress-theme/
-Version: 1.1.2
+Version: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: the-thinker-lite
@@ -1361,6 +1361,15 @@ p.author-description {
 	display: none;
 }
 
+p.comment-form-cookies-consent input {
+	margin: 0 10px 0 0;
+	width: auto;
+}
+
+.comment-form-cookies-consent label {
+	display: inline;
+}
+
 
 /* 8.0 - Media
 -------------------------------------------------------------- */
@@ -1763,11 +1772,7 @@ p > embed, p > iframe, p > object, p > span > embed, p > span > iframe, p > span
 }
 .widget_text ul {
 	list-style: disc;
-	margin: 8% 0 24px 20px;
-}
-
-.site-main .site-content .widget_text ul {
-	margin: 8% 0 24px 20px!important;
+	margin: 0 0 24px 20px;
 }
 .widget_text ol {
 	list-style: decimal;
@@ -2385,7 +2390,241 @@ span.text {
 	content: '\f213';
 	color: #e0e0e0;
 }
-	
+
+/* Gutenberg */
+
+.wp-block-image img {
+	display: block;
+}
+
+.wp-block-button {
+	border-radius: 0;
+}
+
+.wp-block-image.alignright{
+	max-width: 50%;
+	margin-left:60px;
+}
+
+.wp-block-image.alignleft{
+	max-width: 50%;
+	margin-right:60px;
+}
+
+.wp-block-image figcaption{
+	max-width: 100%;
+}
+
+.alignfull,
+.wp-block-cover-image {
+	margin-bottom: 20px;
+}
+
+.wp-block-cover-image {
+	width: auto;
+}
+
+.alignwide {
+	max-width: inherit;
+}
+
+.wp-block-button {
+	border-radius: 0;
+}
+
+.wp-block-quote {
+	margin: 0 0 46px;
+}
+
+.wp-block-separator {
+	border-bottom: none;
+	margin: 2em auto;
+	max-width: 100%;
+}
+
+.wp-block-separator.is-style-dots {
+	background: none;
+}
+
+.wp-block-quote {
+	margin: 0 0 46px;
+}
+
+pre.wp-block-verse,
+.wp-block-verse pre {
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+.wp-block-code{
+	border-radius: 4px;
+	background:none;
+}
+
+.wp-block-button {
+	margin: 0 0 1em 0;
+}
+
+.wp-block-pullquote {
+	border-top: none;
+	border-bottom: none;
+	border-left: none;
+	margin: 0;
+	padding: 0 0 0 1.5em;
+	text-align: left;
+}
+
+.wp-block-pullquote blockquote {
+	border: none;
+}
+
+.wp-block-pullquote cite, .wp-block-pullquote footer {
+	text-transform: uppercase;
+}
+
+.wp-block-table td, 
+.wp-block-table th {
+	padding: 0.5em;
+}
+
+.wp-block-table {
+	width: 100%;
+	display: table;
+}
+
+.wp-block-audio {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.wp-block-audio audio {
+	width: 100%;
+}
+
+.entry-content a.wp-block-button__link:hover {
+	border-bottom: none;
+}
+
+.wp-block-cover-image.has-background-dim.aligncenter {
+	clear: both;
+}
+
+.wp-block-cover-image.has-background-dim.alignleft {
+	margin-right: 20px;
+}
+
+.wp-block-cover-image.has-background-dim.alignright {
+	margin-left: 20px;
+}
+
+.wp-block-cover-image .wp-block-cover-image-text, 
+.wp-block-cover-image .wp-block-cover-text, 
+.wp-block-cover-image h2, 
+.wp-block-cover .wp-block-cover-image-text, 
+.wp-block-cover .wp-block-cover-text, 
+.wp-block-cover h2 {
+	position: relative;
+}
+
+.wp-block-button.alignleft {
+	margin-right: 20px;
+}
+
+.wp-block-button.alignright {
+	margin-left: 20px;
+}
+
+.wp-block-pullquote.alignleft, 
+.wp-block-pullquote.alignright {
+	padding: 20px;
+}
+
+.wp-block-image, 
+.wp-block-image img {
+	margin-bottom: 20px;
+}
+
+.wp-block-cover-image.has-background-dim {
+	position: relative;
+	background-size: cover;
+	background-position: 50%;
+	min-height: 430px;
+	width: 100%;
+	margin: 0 0 1.5em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large),
+.wp-block-quote.is-large, .wp-block-quote.is-style-large {
+	border-left: none;
+	margin: 0 0 0 3em;
+	padding: 0;
+}
+
+.wp-block-quote:not(.is-large):not(.is-style-large) p,
+.wp-block-quote.is-large p, 
+.wp-block-quote.is-style-large p,
+.wp-block-pullquote p {
+	margin-bottom: 0;
+}
+
+.wp-block-quote.is-large cite, .wp-block-quote.is-large footer, 
+.wp-block-quote.is-style-large cite, .wp-block-quote.is-style-large footer,
+.wp-block-quote cite, 
+.wp-block-quote footer {
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+.wp-block-quote.is-large p, 
+.wp-block-quote.is-style-large p {
+	font-style: normal;
+}
+
+.wp-block-audio figcaption {
+	margin: .5em 0;
+}
+
+.wp-block-latest-posts.is-grid {
+	list-style: disc;
+}
+
+.wp-block-column {
+	margin-right: 30px;
+}
+
+.wp-block-column:last-child {
+	margin-right: 0;
+}
+
+@media screen and ( max-width: 880px ) {
+	.wp-block-column {
+		width: 100%;
+	}
+	.wp-block-columns {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 840px) {
+	.alignwide {
+		margin-left: -5vw;
+		margin-right: -5vw;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.alignwide {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 
 /* 14.0 - Media Queries
 -------------------------------------------------------------- */
@@ -3018,5 +3257,3 @@ blockquote.pull.alignright {
 	margin-right: -75px;
 }
 }
-
-.quotescollection-quote  { text-align:right!important; margin-right:10%;}

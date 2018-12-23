@@ -79,6 +79,21 @@ function thinker_setup() {
 	 * Enable support for Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'gallery' ) );
+	
+	// Adding support for core block visual styles.
+	add_theme_support( 'wp-block-styles' );
+	
+	// Add support for full and wide align images.
+	add_theme_support( 'align-wide' );
+		
+	// Add support for custom color scheme.
+	add_theme_support( 'editor-color-palette', array(
+			array(
+				'name'  => esc_html__( 'Black', 'the-thinker-lite' ),
+				'slug'  => 'black',
+				'color' => '#000000',
+			),
+	) );
 }
 endif; // thinker_setup
 add_action( 'after_setup_theme', 'thinker_setup' );
@@ -167,6 +182,20 @@ function thinker_scripts() {
 		wp_enqueue_script( 'thinker-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 }
 add_action( 'wp_enqueue_scripts', 'thinker_scripts' );
+
+/**
+ * Enqueue theme styles within Gutenberg.
+ */
+function thinker_gutenberg_styles() {
+
+	// Load the theme styles within Gutenberg.
+	wp_enqueue_style( 'thinker-gutenberg', get_theme_file_uri( '/editor.css' ), false, '1.1.1', 'all' );
+
+	// Add custom fonts to Gutenberg.
+	wp_enqueue_style( 'thinker-fonts', thinker_fonts_url(), array(), null );
+}
+add_action( 'enqueue_block_editor_assets', 'thinker_gutenberg_styles' );
+
 if (!function_exists('thinker_admin_scripts')) {
 	function thinker_admin_scripts($hook) {
 			wp_enqueue_style('thinker-admin', get_template_directory_uri() . '/admin/admin.css');
@@ -255,19 +284,3 @@ require( get_template_directory() . '/inc/customizer.php' );
  * Load Jetpack compatibility file.
  */
 require( get_template_directory() . '/inc/jetpack.php' );
-
-
-
-function arphabet_widgets_init() {
-
-    register_sidebar( array(
-        'name'          => 'Home Main Poem',
-        'id'            => 'home_main_poem',
-        'before_widget' => '<div>',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h2 class="rounded">',
-        'after_title'   => '</h2>',
-    ) );
-
-}
-add_action( 'widgets_init', 'arphabet_widgets_init' );

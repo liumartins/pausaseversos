@@ -22,9 +22,9 @@
 					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 					}
 				?>
-				<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'the-thinker-lite' ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'the-thinker-lite' ), 'WordPress' ); ?></a>
+				&copy; 2018 - Pausas e Versos
 				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'the-thinker-lite' ), 'The Thinker Lite', '<a href="http://www.anarieldesign.com/the-thinker-lite-free-wordpress-theme/">Anariel Design</a>' ); ?>  
+				  L.S. Martins &copy;
 			</div>
 			<!-- .site-info -->
 			<?php if ( has_nav_menu( 'social' ) ) : // Check if there's a menu assigned to the 'social' location. ?>
